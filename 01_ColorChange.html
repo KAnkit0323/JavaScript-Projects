@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Change</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;   /* 🔥 prevents scrolling */
+            transition: background-color 0.4s ease, color 0.4s ease;
+        }
+
+        h1{
+            margin-bottom: 30px;
+        }
+
+        .button{
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+            border-radius: 12px;
+            cursor: pointer;
+            margin: 10px;
+            border: 3px solid #333;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .button:hover{
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+
+        #grey{ background-color: grey; }
+        #blue{ background-color: blue; }
+        #yellow{ background-color: yellow; }
+        #green{ background-color: green; }
+        #black{ background-color: #212121; }
+
+        h2{
+            margin-top: 25px;
+            font-weight: normal;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>This is the Color Change Project</h1>
+    <span class="button" id="white"></span>
+    <span class="button" id="grey"></span>
+    <span class="button" id="blue"></span>
+    <span class="button" id="yellow"></span>
+    <span class="button" id="green"></span>
+
+    <h2>
+        Try Clicking on one of the colors above
+    </h2>
+    <span>
+        to change the background color of this page!
+    </span>
+
+    <script src="01_script.js" ></script>
+</body>
+</html>
